@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f2f5;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.box{
+    background-color: white;
+    width: 30vw;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.emailDiv, .passwordDiv, .loginDiv, hr{
+    width: 100%; 
+}
+
+.inputField{
+    padding: 1em;
+    width: 100%;
+    font-size: 1rem;   
+}
+
+#passwordField{
+    margin-top: 0.8rem;
+}
+
+.loginBtn{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #1877f2;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+
+.loginBtn:hover{
+    background-color: #0758c2;
+}
+
+.createBtn{
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 1em;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.createBtn:hover{
+    background-color: #3aa325;
+}
+
+/* .inputField:focus {
+    border-color: #1157b3;
+} */
+
+.overlay{
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+}
+
+.upperOverlayDiv{
+    margin: 0;
+}
+
+.breakLine{
+    background-color: black;
+    height: 0.09rem;
+    width: 100%;
+    margin: 0;
+}
+
+.inputSignUpFields{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.signUpFields{
+    padding: 0.4em;
+}
+
+.name{
+    display: flex;
+    gap: 10px;
+}
+
+#email{
+    width: 100%;
+}
+
+#phoneNum{
+    width: 100%;
+}
+
+#signUpPass{
+    width: 100%;
+}
+
+.dropdowns{
+    margin-top: 1rem;
+}
+
+.dobDropdowns{
+    display: flex;
+    justify-content: space-around;
+    width: 100%; 
+}
+
+.genderDiv{
+    margin-top: 1rem;
+}
+
+.genderIdentity{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.signupDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.signupBtn{
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.signupBtn:hover{
+    background-color: #3aa325;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 460px) {
+    .name{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .overlay{
+        background-color: white;
+        font-family: 'Open Sans', sans-serif;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translate(0);
+        padding: 1rem;
+    }
+  }
