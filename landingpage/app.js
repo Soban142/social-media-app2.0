@@ -85,6 +85,8 @@ onAuthStateChanged(auth, (user) => {
         postDescription.focus()
     } 
 
+
+
 async function postHandler() {
     postBox.classList.add('hidden');
     overlay.classList.add('hidden');
@@ -140,7 +142,6 @@ async function postHandler() {
             });
                  addPostData(currentUser)
 
-                postId = docRef.id;
           } catch (e) {
                 console.error("Error adding document: ", e);
           }
@@ -205,10 +206,11 @@ async function updatePostHandler() {
       });
     }
   );
-    postBtn.adaEventListener('click', postHandler)
     postBtn.removeEventListener('click', updatePostHandler)
+    postBtn.addEventListener('click', postHandler)
 }
 
+// Edit function
 
 function editHandler(postId) {
     postCreator();
@@ -219,6 +221,8 @@ function editHandler(postId) {
     postBtn.addEventListener('click', updatePostHandler)
 }
 
+//Delete function
+
 async function deleteHandler(postId) {
     console.log(postId, "delete button working properly")
 
@@ -226,6 +230,9 @@ async function deleteHandler(postId) {
     alert("Your post deleted successfully")
     addPostData();
 }
+
+
+
 
 async function addPostData(userId) {
 
@@ -240,8 +247,6 @@ async function addPostData(userId) {
         // console.log(doc.id, '===>', doc.data());
         // let postTime = new Date().getTime();
         let {authorId, postCaption, postImage, postTime} = doc.data();
-        console.log(new Date(postTime.seconds * 1000))
-        console.log(postTime)
         const authorDetails = await getAuthorData(authorId);
 
         var postContent = 
