@@ -3,6 +3,8 @@ var userEmail = document.getElementById('userEmail');
 const phnNum = document.getElementById('userContactNo');
 var userGender = document.getElementById('userGender');
 var userDescription = document.getElementById('userDescription');
+const userImage = document.getElementById('userImage');
+const userPostingImg = document.querySelector('.userPostingImg')
 var logOutBtn = document.querySelector('.logoutBtn');
 var myProfile = document.querySelector('.myProfile');
 
@@ -45,13 +47,15 @@ async function addUserData(uid) {
             console.log("Document data:", docSnap.data());
             const userData = docSnap.data();
 
-            let {dob, email, firstName, gender, surName, phoneNum} = docSnap.data();
+            let {dob, email, firstName, gender, surName, phoneNum, profilePic} = docSnap.data();
 
             userName.textContent = `${firstName} ${surName}`
             userEmail.textContent = email;
             phnNum.textContent = phoneNum;
             userDescription.textContent = userData.userDescription || "No description added";
             userGender.textContent = gender;
+            userImage.src = `${profilePic || '../assests/avatarDummy.png'}`
+            userPostingImg.src = `${profilePic || '../assests/avatarDummy.png'}`
 
         } else {
             console.log("No such document!");

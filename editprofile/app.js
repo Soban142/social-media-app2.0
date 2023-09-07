@@ -98,6 +98,7 @@ let editHandler = function  () {
             });
 
             alert('Profile updated!');
+            window.location.href = document.referrer;
 
           } catch (error) {
                 alert(error)
