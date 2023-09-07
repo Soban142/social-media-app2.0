@@ -304,60 +304,7 @@ async function getAuthorData(authorUId) {
 }
 
 
-
 window.editHandler = editHandler;
 window.deleteHandler = deleteHandler;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -9,7 +9,7 @@ onAuthStateChanged(auth, (user) => {
       addUserData(uniqueIdOfCurrentData);
       currentUser = uniqueIdOfCurrentData;
   } else {
-      window.location.href = '../loginpage/index.html'
+      window.location.href = '../index.html'
   }
 })
 

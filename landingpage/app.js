@@ -1,4 +1,4 @@
-
+import { getAuth, getFirestore, auth, db, doc, getDoc, onAuthStateChanged, signOut, setDoc, addDoc, collection, query, getDocs, ref, uploadBytesResumable, getDownloadURL, storage, updateDoc, deleteDoc, serverTimestamp, orderBy } from "../firebaseconfig.js";
 
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
@@ -22,9 +22,6 @@ const uploadPostImg = document.querySelector('#uploadPostImg')
 const postBtn = document.querySelector('.postBtn');
 const postBox = document.querySelector('.postBox');
 const postDiv = document.querySelector('.postDiv');
-
-
-import { getAuth, getFirestore, auth, db, doc, getDoc, onAuthStateChanged, signOut, setDoc, addDoc, collection, query, getDocs, ref, uploadBytesResumable, getDownloadURL, storage, updateDoc, deleteDoc, serverTimestamp, orderBy } from "../firebaseconfig.js";
 
 console.log(serverTimestamp, "==>>>serverTimestamp")
 

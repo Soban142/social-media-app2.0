@@ -24,7 +24,7 @@ async function loginHandler () {
       const user = userCredential.user;
       console.log(user)
       if(user){
-        window.location.href = '../landingpage/index.html'
+        window.location.href = '../index.html'
       }
     })
     .catch((error) => {
